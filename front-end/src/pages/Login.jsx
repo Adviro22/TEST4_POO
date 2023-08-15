@@ -53,7 +53,7 @@ export default function Login() {
           </button>
         </form>
 
-        <p className="flex gap-x-2 justify-between text-white-700">
+        <p className="flex gap-x-2 justify-between text-white">
           No tienes una cuenta...? <Link to="/register" className="text-green-500 font-bold">Registrarse</Link>
         </p>
        </div> 
