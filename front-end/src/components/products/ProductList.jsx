@@ -9,6 +9,7 @@ export function ProductList({ products }) { // Cambio aquí para recibir 'produc
     <table className="border-collapse border border-black mx-auto">
       <thead className="bg-red-800">
         <tr>
+          <th className="border-black border-4 p-2 text-xl text-black">#</th>
           <th className="border-black border-4 p-2 text-xl text-black"><b>Nombre del Producto</b></th>
           <th className="border-black border-4 p-2 text-xl text-black"><b>Precio</b></th>
           <th className="border-black border-4 p-2 text-xl text-black"><b>Stock</b></th>
@@ -16,8 +17,9 @@ export function ProductList({ products }) { // Cambio aquí para recibir 'produc
         </tr>
       </thead>
       <tbody>
-        {products.map((product) => (
+        {products.map((product, index) => (
           <tr key={product._id}>
+            <td className="border-black border-4 p-2 text-xl text-black">{index + 1}</td>
             <td className="border-black border-4 p-2 text-black">{product.nombre}</td>
             <td className="border-black border-4 p-2 text-black">$ {product.precio}</td>
             <td className="border-black border-4 p-2 text-black">{product.stock}</td>
