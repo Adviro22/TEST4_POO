@@ -1,7 +1,7 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useProducts } from "../context/ProductContext";
-import { ProductCard } from "../components/products/ProductCard";
 import { ImFileEmpty } from "react-icons/im";
+import { ProductList } from "../components/products/ProductList"; // Asegúrate de importar correctamente ProductList
 
 export default function GetProducts() {
   const { products, getProducts } = useProducts();
@@ -11,7 +11,7 @@ export default function GetProducts() {
   }, []);
 
   return (
-    <>
+    <div className="table-container mx-auto">
       {products.length === 0 && (
         <div className="flex justify-center items-center p-10">
           <div>
@@ -23,11 +23,7 @@ export default function GetProducts() {
         </div>
       )}
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-2">
-        {products.map((product) => (
-          <ProductCard product={product} key={product._id} />
-        ))}
-      </div>
-    </>
+      {products.length > 0 && <ProductList products={products} />}
+    </div>
   );
 }
