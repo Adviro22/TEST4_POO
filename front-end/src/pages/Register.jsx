@@ -27,17 +27,17 @@ export default function Register() {
 
   return (
     <div className="flex items-center justify-center h-[calc(100vh-100px)]">
-      <div className="bg-white max-w-md w-full p-10 rounded-md">
+      <div className="bg-slate-900 max-w-md w-full p-10 rounded-md">
         <ul className="bg-red-700 text-white rounded-md text-center">
           {registerErrors.map((error, i) => (
             <li key={i}>{error}</li>
           ))}
         </ul>
-        <h2 className="text-2xl font-bold text-violet-800 uppercase text-center">
+        <h2 className="text-2xl font-bold text-white uppercase text-center">
           Registro de Usuario
         </h2>
-        <form onSubmit={submitRegister} className="bg-violet-300">
-          <label htmlFor="username:" className="text-md block my-1 text-black">
+        <form onSubmit={submitRegister} className="bg-slate-900">
+          <label htmlFor="username:" className="text-md block my-1 text-white">
             Username:
           </label>
           <input
@@ -53,7 +53,7 @@ export default function Register() {
             <p className="text-red-500 font-semibold">{errors.username.message}</p>
           )}
 
-          <label htmlFor="email:" className="text-md block my-1 text-black">
+          <label htmlFor="email:" className="text-md block my-1 text-white">
             Email:
           </label>
           <input
@@ -68,7 +68,7 @@ export default function Register() {
           {errors.email && (
             <p className="text-red-500 font-semibold">{errors.email.message}</p>
           )}
-          <label htmlFor="password" className="text-md block my-1 text-black">
+          <label htmlFor="password" className="text-md block my-1 text-white">
             Password:
           </label>
           <input
@@ -94,9 +94,9 @@ export default function Register() {
           </button>
         </form>
 
-        <p className="flex gap-x-2 justify-between text-violet-700">
+        <p className="flex gap-x-2 justify-between text-white">
           Ya tienes una cuenta...?{" "}
-          <Link to="/login" className="text-sky-500 font-bold">
+          <Link to="/login" className="text-green-500 font-bold">
             Login
           </Link>
         </p>

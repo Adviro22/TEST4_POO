@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 body{
-    @apply bg-slate-900 text-white;
+    @apply bg-slate-400 text-slate-900 font-bold;
 }
 form {
   @apply inline-block text-left p-4 border rounded-lg border-gray-300 w-full;

@@ -23,24 +23,24 @@ export default function Login() {
 
   return (
     <div className="flex items-center justify-center h-[calc(100vh-100px)]">
-       <div className="bg-white max-w-md w-full p-10 rounded-md">
+       <div className="bg-slate-900 max-w-md w-full p-10 rounded-md">
         <ul className="bg-red-700 text-white rounded-md text-center">
           {loginErrors.map((error, i) => (
             <li key={i}>{error}</li> 
           ))}
         </ul>
-        <h2 className="text-2xl font-bold text-violet-800 uppercase text-center">Login de Autentificacion</h2>
-        <form onSubmit={submitLogin} className="bg-violet-300">
-          <label htmlFor="username:" className="text-md block my-1 text-black">Username:</label>
-          <input className="w-full bg-white px-4 py-2 rounded-md text-black"
+        <h2 className="text-2xl font-bold text-white uppercase text-center">Login de Autentificacion</h2>
+        <form onSubmit={submitLogin} >
+          <label htmlFor="username:" className="text-md block my-1 text-white">Username:</label>
+          <input className="w-full bg-white text-black px-4 py-2 rounded-md my-2"
             type="text"
             name="username"
             placeholder="Escriba su username..."
             {...register("username", { required: {value:true,message:"Username es requerido"} })}
           />
           {errors.username && (<p className="text-red-500 font-semibold">{errors.username.message}</p>)}
-          <label htmlFor="password" className="text-md block my-1 text-black">Password:</label>
-          <input className="w-full bg-white px-4 py-2 rounded-md text-black"
+          <label htmlFor="password" className="text-md block my-1 text-white">Password:</label>
+          <input className="w-full bg-white text-black px-4 py-2 rounded-md my-2"
             type="password"
             name="password"
             placeholder="Escriba su password..."
@@ -53,8 +53,8 @@ export default function Login() {
           </button>
         </form>
 
-        <p className="flex gap-x-2 justify-between text-violet-700">
-          No tienes una cuenta...? <Link to="/register" className="text-sky-500 font-bold">Registrarse</Link>
+        <p className="flex gap-x-2 justify-between text-white-700">
+          No tienes una cuenta...? <Link to="/register" className="text-green-500 font-bold">Registrarse</Link>
         </p>
        </div> 
     </div>

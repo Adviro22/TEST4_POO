@@ -7,21 +7,21 @@ export function Navbar() {
   console.log(isAuthenticated, user)
 
   return (
-    <nav className="bg-orange-400 my-3 flex justify-between py-5 px-10 rounded-lg ">
-      <h1 className="text-2xl font-bold">
+    <nav className="bg-slate-900 my-3 flex justify-between py-5 px-10 rounded-lg ">
+      <h1 className="text-2xl font-bold text-white">
         <Link to={isAuthenticated ? "/products" : "/"}>Productos</Link>
       </h1>
       <ul className="flex gap-x-2">
         {isAuthenticated ? (
           <>
-            <li>
+            <li className="text-white">
               user: {user.email}
             </li>
             <li>
               <ButtonLink to="/add-product">Ingresar Productos</ButtonLink>
             </li>
             <li>
-              <Link to="/" onClick={() => logout()}>
+              <Link to="/" onClick={() => logout()} className="text-white">
                 Logout
               </Link>
             </li>
