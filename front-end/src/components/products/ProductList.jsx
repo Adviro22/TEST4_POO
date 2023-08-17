@@ -17,7 +17,7 @@ export function ProductList({ products }) { // Cambio aquí para recibir 'produc
           <th className="border-black border-4 p-2 text-xl text-black"><b>Botones</b></th>
         </tr>
       </thead>
-      <tbody>
+      <tbody className="bg-slate-200">
         {products.map((product, index) => (
           <tr key={product._id}>
             <td className="border-black border-4 p-2 text-xl text-black">{index + 1}</td>
